@@ -1,6 +1,6 @@
 import { Runs } from "../schemas/runSchema.js";
 
-export const runsController = {
+export const runsRepository = {
   createRuns: async (details) => {
     try {
       const response = await Runs.create(details);

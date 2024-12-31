@@ -17,7 +17,7 @@ export const authService = async (details) => {
   }
 
   const tokken = jwt.sign(
-    { payroll: user.payrollId, id: user._id },
+    { payroll: user.payrollId, id: user._id,firstName:user.firstName },
     JWT_SECRET,
     { expiresIn: "1h" }
   );

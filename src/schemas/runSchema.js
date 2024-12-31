@@ -2,19 +2,24 @@ import mongoose from "mongoose";
 
 const runSchema = new mongoose.Schema(
   {
-    loader: {
-      type: mongoose.Schema.ObjectId,
-      ref: "User",
+    payrollId: {
+      type: String,
+      required: true,
+    },
+
+    firstName: {
+      type: String,
       required: true,
     },
 
     route: {
-      type: String,
+      type: [String],
       required: true,
+      uppercase: true,
     },
 
     timeTaken: {
-      type: String,
+      type: [String],
       required: true,
     },
   },

@@ -26,6 +26,7 @@ export function isLoggedIn(req, res, next) {
     req.user = {
       payrollId: decoded.payroll,
       id: decoded.id,
+      firstName: decoded.firstName,
     };
 
     next();
@@ -35,6 +36,4 @@ export function isLoggedIn(req, res, next) {
     });
   }
 }
-res.status(400).json({
-  message: "Token Expired",
-});
+ 
